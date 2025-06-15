@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calco - High-Performance Math Library</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for code blocks and enhanced readability */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light background */
+            color: #333;
+        }
+        .code-block {
+            background-color: #2d2d2d; /* Dark background for code */
+            color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto; /* Enable horizontal scrolling for long lines */
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .section-header {
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+            color: #1a73e8; /* A nice blue for icons */
+        }
+        .download-link {
+            background-color: #1a73e8;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem 0.25rem;
+            transition: background-color 0.3s ease;
+        }
+        .download-link:hover {
+            background-color: #155bb5;
+        }
+        .table-header {
+            background-color: #f0f0f0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .button-primary {
+            background-color: #1a73e8;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button-primary:hover {
+            background-color: #155bb5;
+        }
+        .footer-link {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #1a73e8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased leading-normal tracking-wide">
+    <!-- Header -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-blue-700">calco</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="text-gray-600 hover:text-blue-700 transition duration-300">About</a></li>
+                    <li><a href="#features" class="text-gray-600 hover:text-blue-700 transition duration-300">Features</a></li>
+                    <li><a href="#installation" class="text-gray-600 hover:text-blue-700 transition duration-300">Installation</a></li>
+                    <li><a href="#downloads" class="text-gray-600 hover:text-blue-700 transition duration-300">Downloads</a></li>
+                    <li><a href="#license" class="text-gray-600 hover:text-blue-700 transition duration-300">License</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-700 text-white py-20 text-center rounded-b-lg">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-extrabold mb-4">calco: High-Performance Math Library</h1>
+            <p class="text-xl mb-8 opacity-90">Unlock blazing-fast mathematical operations for your Python projects.</p>
+            <a href="#installation" class="button-primary bg-white text-blue-700 px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition duration-300">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+
+        <!-- About Section -->
+        <section id="about" class="mb-16">
+            <h2 class="text-4xl font-bold mb-6 section-header text-blue-700">About calco</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                <strong class="font-semibold">calco</strong> is a high-performance, cross-platform math library written in <strong class="font-semibold">C</strong> and exposed as a <strong class="font-semibold">Python extension</strong>.
+            </p>
+            <p class="text-lg leading-relaxed">
+                It provides fast, accurate, and comprehensive implementations of advanced mathematical operations beyond what's available in Python's <code class="bg-gray-200 p-1 rounded">math</code> or <code class="bg-gray-200 p-1 rounded">numpy</code> modules.
+            </p>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="mb-16">
+            <h2 class="text-4xl font-bold mb-6 section-header text-blue-700">🚀 Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">Fast C-level execution</h3>
+                            <p class="text-gray-700">Leverage the power of C for unparalleled performance in your mathematical computations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="feature-item">
+                        <span class="feature-icon">🧮</span>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">60+ Math Operations</h3>
+                            <p class="text-gray-700">A comprehensive suite covering arithmetic, trigonometry, logarithms, exponentials, and special functions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="feature-item">
+                        <span class="feature-icon">🧩</span>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">Cross-Platform Portable</h3>
+                            <p class="text-gray-700">Designed to work seamlessly across Windows, Linux, and macOS environments.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="feature-item">
+                        <span class="feature-icon">📦</span>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">Direct Python Import</h3>
+                            <p class="text-gray-700">Packaged as <code class="bg-gray-200 p-1 rounded">.pyd</code> / <code class="bg-gray-200 p-1 rounded">.so</code> for easy integration into your Python projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Section -->
+        <section id="installation" class="mb-16">
+            <h2 class="text-4xl font-bold mb-6 section-header text-blue-700">📦 Installation</h2>
+            <p class="text-lg mb-4">Install <code class="bg-gray-200 p-1 rounded">calco</code> from PyPI:</p>
+            <pre class="code-block mb-8"><code>pip install calco</code></pre>
+            <p class="text-lg mb-4">Or install directly from a wheel file (e.g., <code class="bg-gray-200 p-1 rounded">calco-1.0.0-cp311-win_amd64.whl</code>):</p>
+            <pre class="code-block"><code>pip install calco-1.0.0-cp311-win_amd64.whl</code></pre>
+        </section>
+
+        <!-- Example Usage Section -->
+        <section id="usage" class="mb-16">
+            <h2 class="text-4xl font-bold mb-6 section-header text-blue-700">🧪 Example Usage</h2>
+            <pre class="code-block"><code>import calco
+
+# Basic math
+print(calco.add(3.0, 4.5))            # 7.5
+print(calco.divide(10.0, 3.0))        # 3.333...
+
+# Trigonometry
+print(calco.sine(1.57))               # ≈ sin(90°)
+print(calco.arctangent2(2.0, 3.0))    # atan2(y, x)
+
+# Logarithmic
+print(calco.log_base10(1000))         # 3.0
+
+# Special
+print(calco.gamma_function(0.5))      # ≈ sqrt(pi)
+print(calco.fused_multiply_add(2, 3, 4))  # (2*3)+4 = 10
+</code></pre>
+        </section>
+
+        <!-- Available Functions Section -->
+        <section id="functions" class="mb-16">
+            <h2 class="text-4xl font-bold mb-6 section-header text-blue-700">📚 Available Functions</h2>
+            <div class="overflow-x-auto rounded-lg shadow-sm">
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-3 px-4 table-header text-lg font-semibold">Category</th>
+                            <th class="py-3 px-4 table-header text-lg font-semibold">Functions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3 px-4">Arithmetic</td>
+                            <td class="py-3 px-4">add, subtract, multiply, divide, power, square_root, cube_root, absolute_value, float_modulo, positive_difference, copy_sign_double, fused_multiply_add</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Rounding</td>
+                            <td class="py-3 px-4">floor_val, ceil_val, round_val, nearbyint_val, truncate_val</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Trigonometric</td>
+                            <td class="py-3 px-4">sine, cosine, tangent, arcsine, arccosine, arctangent, arctangent2</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Hyperbolic</td>
+                            <td class="py-3 px-4">hyperbolic_sine, hyperbolic_cosine, hyperbolic_tangent, inverse_hyperbolic_sine, inverse_hyperbolic_cosine, inverse_hyperbolic_tangent</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Logarithmic</td>
+                            <td class="py-3 px-4">natural_log, log_base10, log_base2, log_custom_base</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Exponential</td>
+                            <td class="py-3 px-4">exponential, exponential_base2, exponential_minus_1</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Special</td>
+                            <td class="py-3 px-4">gamma_function, log_gamma_function, error_function, complementary_error_function, next_after_double</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Constants</td>
+                            <td class="py-3 px-4">get_pi, get_e</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Converters</td>
+                            <td class="py-3 px-4">degrees_to_radians, radians_to_degrees</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Checks</td>
+                            <td class="py-3 px-4">is_nan, is_infinity</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Platform Support Section -->
+        <section id="platform-support" class="mb-16">
+            <h2 class="text-4xl font-bold mb-6 section-header text-blue-700">🛠 Platform Support</h2>
+            <div class="overflow-x-auto rounded-lg shadow-sm">
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-3 px-4 table-header text-lg font-semibold">OS</th>
+                            <th class="py-3 px-4 table-header text-lg font-semibold">Architectures</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3 px-4">Windows</td>
+                            <td class="py-3 px-4">x86 / x64</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">Linux</td>
+                            <td class="py-3 px-4">x86_64, ARM (via wheel)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4">macOS</td>
+                            <td class="py-3 px-4">Intel / Apple Silicon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section id="downloads" class="mb-16 text-center">
+            <h2 class="text-4xl font-bold mb-6 section-header text-blue-700">⬇️ Downloads (Windows)</h2>
+            <p class="text-lg mb-6">Select the appropriate wheel file for your Python version and system architecture.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Win32 Downloads -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600">Windows (32-bit)</h3>
+                    <ul class="list-none p-0">
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/v53pqxbsottb2ka/calco-1.0.0-cp38-cp38-win32.whl/file" target="_blank" class="download-link">Python 3.8 (Win32)</a></li>
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/2v4qz5kzt8h36ol/calco-1.0.0-cp310-cp310-win32.whl/file" target="_blank" class="download-link">Python 3.10 (Win32)</a></li>
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/smgrgs7xv7jj8w2/calco-1.0.0-cp311-cp311-win32.whl/file" target="_blank" class="download-link">Python 3.11 (Win32)</a></li>
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/pad8o9wjm4gmzkw/calco-1.0.0-cp312-cp312-win32.whl/file" target="_blank" class="download-link">Python 3.12 (Win32)</a></li>
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/n7hhnaasq888suc/calco-1.0.0-cp313-cp313-win32.whl/file" target="_blank" class="download-link">Python 3.13 (Win32)</a></li>
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/ry085e68fghxckc/calco-1.0.0-cp39-cp39-win32.whl/file" target="_blank" class="download-link">Python 3.9 (Win32)</a></li>
+                    </ul>
+                </div>
+                <!-- Win_amd64 Downloads -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600">Windows (64-bit)</h3>
+                    <ul class="list-none p-0">
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/3m7crls71kvcjfl/calco-1.0.0-cp38-cp38-win_amd64.whl/file" target="_blank" class="download-link">Python 3.8 (x64)</a></li>
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/mke8lx8l9qajxcy/calco-1.0.0-cp39-cp39-win_amd64.whl/file" target="_blank" class="download-link">Python 3.9 (x64)</a></li>
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/c8kxs8td9zpn2b0/calco-1.0.0-cp310-cp310-win_amd64.whl/file" target="_blank" class="download-link">Python 3.10 (x64)</a></li>
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/vn8ayhm0dpsgl7k/calco-1.0.0-cp311-cp311-win_amd64.whl/file" target="_blank" class="download-link">Python 3.11 (x64)</a></li>
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/eo9yu9y0yb3uycc/calco-1.0.0-cp312-cp312-win_amd64.whl/file" target="_blank" class="download-link">Python 3.12 (x64)</a></li>
+                        <li class="mb-2"><a href="https://www.mediafire.com/file/001cott6t306n6o/calco-1.0.0-cp313-cp313-win_amd64.whl/file" target="_blank" class="download-link">Python 3.13 (x64)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- License Section -->
+        <section id="license" class="mb-16">
+            <h2 class="text-4xl font-bold mb-6 section-header text-blue-700">🧑‍💻 License</h2>
+            <p class="text-lg leading-relaxed">
+                <strong class="font-semibold">MIT License</strong> – free for personal, academic, and commercial use.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 rounded-t-lg">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">&copy; 2023 calco. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#about" class="footer-link">About</a>
+                <a href="#features" class="footer-link">Features</a>
+                <a href="#installation" class="footer-link">Installation</a>
+                <a href="#downloads" class="footer-link">Downloads</a>
+                <a href="#license" class="footer-link">License</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
