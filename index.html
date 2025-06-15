@@ -126,9 +126,42 @@
     <div id="installation" class="content-section">
         <div class="section-title">📦 Installation</div>
         <p>Install from PyPI:</p>
-        <pre class="code-block"><code>pip install calco</code></pre>
-        <p>Or install directly from a wheel:</p>
-        <pre class="code-block"><code>pip install calco-1.0.0-cp311-win_amd64.whl</code></pre>
+        <pre class="code-block"><code>pip install calco==1.0.0</code></pre>
+
+        <hr style="border-top: 1px dashed #cccccc; margin: 20px 0;">
+
+        <div class="section-title">Important Notes for Installation</div>
+        <p>
+            <font color="#CC0000"><b>Important Note about Version:</b></font> Please be aware that version <b>1.0.0</b> of the `calco` library is the recommended stable release. Other versions might be unstable.
+        </p>
+        <p>
+            <font color="#CC0000"><b>Renaming the .pyd file:</b></font> After downloading and installing the Wheel (<code>.whl</code>) file, you might need to rename the <code>.pyd</code> (or <code>.so</code> on Linux/macOS) file located inside your Python's <code>site-packages</code> folder. The file should be named <b><code>calco.pyd</code></b> (or <b><code>calco.so</code></b>) to allow direct importing using <code>import calco</code>.
+        </p>
+        <p>
+            If you do not rename the file, you will not be able to import the library using the conventional <code>import calco</code>. In this case, you will need to import it using the full name of the `pyd` file, by replacing hyphens (`-`) with underscores (`_`) and removing `.pyd` from the end. For example:
+        </p>
+        <pre class="code-block"><code># Example if you don't rename the .pyd file
+# (Replace 'calco_1_0_0_cp311_win_amd64' with the actual full name of your .pyd file)
+import calco_1_0_0_cp311_win_amd64 as calco
+print(calco.add(1, 2))
+</code></pre>
+        <p>
+            <font color="#CC0000"><b>How to find your site-packages folder:</b></font> You can find the path to your <code>site-packages</code> folder using the following commands in your command prompt/terminal:
+        </p>
+        <pre class="code-block"><code># For Windows
+python -c "import site; print(site.getsitepackages())"
+
+# For Linux/macOS
+python3 -c "import site; print(site.getsitepackages())"
+</code></pre>
+        <p>
+            <font color="#CC0000"><b>Importing after Installation:</b></font> After ensuring that the <code>calco.pyd</code> (or <code>calco.so</code>) file is correctly named and located in your <code>site-packages</code> folder, you can simply import and use the library:
+        </p>
+        <pre class="code-block"><code>import calco
+
+# You can now use all calco functions, e.g.
+print(calco.add(5.0, 2.5))
+</code></pre>
     </div>
 
     <!-- Example Usage Section -->
